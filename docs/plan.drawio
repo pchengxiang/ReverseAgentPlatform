@@ -1,0 +1,80 @@
+<mxfile host="65bd71144e">
+    <diagram id="GJLAZ0MG0C5dKEbMjN6Z" name="Page-1">
+        <mxGraphModel dx="1403" dy="261" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ODGxq6lhRL6khDJTwBmT-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="檔案管理&lt;div&gt;講究泛&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;用性&lt;/span&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="300" width="120" x="90" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ODGxq6lhRL6khDJTwBmT-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="程式碼編輯器&lt;div&gt;人機互動主軸&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="240" width="270" x="210" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ODGxq6lhRL6khDJTwBmT-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+                    <mxGeometry height="41" width="389" x="91" y="139" as="geometry"/>
+                </mxCell>
+                <mxCell id="ODGxq6lhRL6khDJTwBmT-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="工具列&lt;div&gt;間單易用&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="41" width="149" x="91" y="139" as="geometry"/>
+                </mxCell>
+                <mxCell id="ODGxq6lhRL6khDJTwBmT-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Tab" vertex="1">
+                    <mxGeometry height="41" width="114.5" x="240" y="139" as="geometry"/>
+                </mxCell>
+                <mxCell id="ODGxq6lhRL6khDJTwBmT-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="簡單系統操作&lt;div&gt;減縮關&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="41" width="114.5" x="365.5" y="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="ODGxq6lhRL6khDJTwBmT-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="底部文字操作介面&lt;div&gt;Terminal/Output&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="270" x="210" y="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="ODGxq6lhRL6khDJTwBmT-11" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Agent有關操作方法" vertex="1">
+                    <mxGeometry height="80" width="80" x="640" y="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="96qrjEP5_aKb00a_ICsO-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+                    <mxGeometry height="60" width="120" x="90" y="181" as="geometry"/>
+                </mxCell>
+                <mxCell id="96qrjEP5_aKb00a_ICsO-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
+                    <mxGeometry height="30" width="60" x="90" y="181" as="geometry"/>
+                </mxCell>
+                <mxCell id="96qrjEP5_aKb00a_ICsO-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
+                    <mxGeometry height="30" width="60" x="150" y="181" as="geometry"/>
+                </mxCell>
+                <mxCell id="96qrjEP5_aKb00a_ICsO-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
+                    <mxGeometry height="30" width="60" x="91" y="211" as="geometry"/>
+                </mxCell>
+                <mxCell id="96qrjEP5_aKb00a_ICsO-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
+                    <mxGeometry height="30" width="60" x="150" y="211" as="geometry"/>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-5" edge="1" parent="1" source="-FxBxd6PmMBf7SWmjigD-1" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-FxBxd6PmMBf7SWmjigD-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="file_desk.js" vertex="1">
+                    <mxGeometry height="60" width="120" x="-150" y="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-6" edge="1" parent="1" source="-FxBxd6PmMBf7SWmjigD-2" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-FxBxd6PmMBf7SWmjigD-7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-90" y="780" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="新增文件資料物件" vertex="1">
+                    <mxGeometry height="60" width="120" x="-150" y="690" as="geometry"/>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-4" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;工作桌&lt;/span&gt;&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent; font-size: 12px; font-weight: normal;&quot;&gt;平替tab的重量級工具&lt;br&gt;此處展示將文件建立在工作桌上.&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+                    <mxGeometry height="110" width="180" x="-170" y="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-8" edge="1" parent="1" source="-FxBxd6PmMBf7SWmjigD-7" style="edgeStyle=none;html=1;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-90" y="870" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="call desk_storage.js&lt;div&gt;to finish saving file&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="-150" y="780" as="geometry"/>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-10" edge="1" parent="1" source="-FxBxd6PmMBf7SWmjigD-9" style="edgeStyle=none;html=1;" target="-FxBxd6PmMBf7SWmjigD-7" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="-FxBxd6PmMBf7SWmjigD-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="更新工作桌列表" vertex="1">
+                    <mxGeometry height="60" width="120" x="-150" y="870" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

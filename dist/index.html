@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Platform</title>
+  <script type="module" crossorigin src="/assets/index-CCnc8lTB.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-B8xr6ykz.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-BKIQPlRL.css">
+</head>
+<body>
+    <header>
+        <span class="app-title">Elixir特化編碼平台</span>
+        <!-- 工具列/系統操作 -->
+       <div class="workspace-menu">
+                
+            <button id="choose_operation">選擇操作</button>
+            <div id="workspaceMenu" class="workspace-menu-popup hidden">
+
+            <div class="menu-section-title">工作區模式</div>
+
+            <button class="menu-item" data-action="desk">
+                ▦ 工作桌模式
+            </button>
+
+            <button class="menu-item" data-action="explorer">
+                📁 檔案櫃模式
+            </button>
+
+            <div class="menu-divider"></div>
+
+            <div class="menu-section-title">檔案操作</div>
+
+            <button id="newFileButton" class="menu-item" data-action="new-project-file">
+                ＋ 新增專案檔案
+            </button>
+
+            <button class="menu-item" data-action="filter-settings">
+                ＋ 篩選設定
+            </button>
+
+            <div class="menu-divider"></div>
+
+            <div class="menu-section-title">工作桌設定</div>
+        </div>
+       </div>
+        <button id="toggleAiPanel" class="settings-button ai-toggle-button" type="button" title="切換 AI 面板 (Ctrl+Alt+B)" aria-label="切換 AI 面板" aria-expanded="false">◫</button>
+        <button id="settingsButton" class="settings-button" type="button" title="設定" aria-label="開啟設定">⚙</button>
+    </header>
+    <aside class="file-explorer">
+        <div class="file-header">
+            <span>檔案櫃</span>
+            <button id="openProject" type="button">
+                開啟專案
+            </button>
+        </div>
+        <small class="explorer-shortcut">Shift+左鍵加入工作桌</small>
+        <p id="fileNotice" class="file-notice hidden" role="status" aria-live="polite"></p>
+
+        <div id="fileTree" class="file-tree">
+            <div class="empty-project">
+                尚未開啟專案
+            </div>
+        </div>
+        <section id="deskView" class="desk-view hidden" aria-label="工作桌">
+            <div class="desk-view-header"><strong>工作桌</strong><span id="deskFileCount">0 個參考檔案</span></div>
+            <p class="desk-hint">檔案櫃按 Shift+左鍵加入；工作桌按 Shift+左鍵移出。一般左鍵會在編輯器開啟檔案。</p>
+            <div id="deskFiles" class="desk-files"></div>
+        </section>
+        <!-- 檔案管理/Agent操作面板 -->
+    </aside>
+
+    <div class="horizontal-resizer"></div>
+
+    <main>
+        <div></div>
+        <section class="editor">
+            <div id="monaco-editor"></div>
+        <!-- 程式碼編輯器 -->
+        </section>
+
+        <div class="vertical-resizer"></div>
+
+         <section class="output">
+            <nav>
+                <div>Terminal</div>
+                <div>Output</div>
+            </nav>
+            <!-- 終端/output -->
+         </section>
+    </main>
+    <aside id="aiPanel" class="ai-panel hidden" aria-label="AI 輔助面板">
+        <div class="ai-panel-header">
+            <span>AI 工作區</span>
+            <button id="closeAiPanel" class="ai-panel-close" type="button" title="關閉" aria-label="關閉 AI 面板">×</button>
+        </div>
+        <div class="ai-panel-body">
+            <p class="empty-project">右側 AI 面板已就緒，之後可於此接入工作桌上下文與任務功能。</p>
+        </div>
+    </aside>
+    <footer>
+        <!-- 額外工具列 -->
+    </footer>
+
+    <div id="deskFilterOverlay" class="desk-filter-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="deskFilterTitle">
+        <section class="desk-filter-panel">
+            <div class="filter-header">
+                <div><h2 id="deskFilterTitle">工作桌篩選器</h2><span>設定哪些檔案可以加入工作桌，以及檔案引用內容</span></div>
+                <button id="closeDeskFilter" type="button" aria-label="關閉">×</button>
+            </div>
+            <div class="filter-layout">
+                <nav class="filter-sidebar" aria-label="篩選設定">
+                    <button class="filter-nav active" data-tab="rules" type="button">黑白名單</button>
+                    <button class="filter-nav" data-tab="syntax" type="button">語法控制</button>
+                    <button class="filter-nav" data-tab="preview" type="button">檔案預覽</button>
+                    <button class="filter-nav" data-tab="output" type="button">引用內容</button>
+                </nav>
+                <div class="filter-content">
+                    <section id="page-rules" class="filter-page active">
+                        <h3>白名單</h3><p>符合任一規則的檔案才可加入工作桌；規則不會自動加入檔案。留空表示不限制路徑。</p>
+                        <div id="whitelistRules" class="rule-list"></div>
+                        <div class="rule-add"><input id="whitelistInput" placeholder="例如：src/** 或 mix.exs"><button id="addWhitelist" type="button">＋</button></div>
+                        <h3>黑名單</h3><p>黑名單優先，符合的檔案會排除。支援路徑 glob：*、**、?</p>
+                        <div id="blacklistRules" class="rule-list"></div>
+                        <div class="rule-add"><input id="blacklistInput" placeholder="例如：**/secret/**"><button id="addBlacklist" type="button">＋</button></div>
+                    </section>
+                    <section id="page-syntax" class="filter-page">
+                        <h3>允許的語法</h3><p>只有下列副檔名會顯示在工作桌，例如 ex、exs、js。</p>
+                        <div id="syntaxRules" class="rule-list"></div>
+                        <div class="rule-add"><input id="syntaxInput" placeholder="副檔名，例如：ex"><button id="addSyntax" type="button">＋</button></div>
+                    </section>
+                    <section id="page-preview" class="filter-page"><h3>篩選結果</h3><p>預覽哪些檔案符合加入條件；符合的檔案仍需以 Shift+左鍵手動加入工作桌。</p><div id="policyPreview"></div></section>
+                    <section id="page-output" class="filter-page">
+                        <h3>工作桌檔案引用</h3><p>控制工作桌對檔案提供的引用資訊。</p>
+                        <label><input id="outputReference" type="checkbox"> 顯示檔案路徑引用</label>
+                        <label><input id="outputMetadata" type="checkbox"> 顯示檔案名稱與語法資訊</label>
+                        <label><input id="outputFull" type="checkbox"> 提供完整檔案內容</label>
+                        <p class="filter-hint">完整內容僅在開啟檔案後可供工作桌引用。</p>
+                    </section>
+                </div>
+            </div>
+            <div class="filter-footer"><span id="filterStatus">規則尚未變更</span><button id="saveDeskFilter" type="button">儲存規則</button></div>
+        </section>
+    </div>
+
+
+</body>
+</html>
